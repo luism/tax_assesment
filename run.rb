@@ -1,4 +1,4 @@
-require_relative 'lib/Tax'
+require_relative 'lib/tax'
 
 Tax.new('input_files/input_1.txt').execute
 puts ''
