@@ -1,5 +1,4 @@
 require_relative '../../lib/parser'
-require_relative '../../lib/parser'
 
 RSpec.describe Parser, "execute" do
   let(:excluded_items) {  %w(chocolate chocolates pills food medical book books) }
