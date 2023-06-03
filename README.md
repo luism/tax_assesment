@@ -1,3 +1,7 @@
+Intall: 
+```
+bundle install
+```
 Run:
 
 ```
