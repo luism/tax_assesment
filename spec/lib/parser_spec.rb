@@ -1,7 +1,9 @@
 require_relative '../../lib/parser'
+require_relative '../../lib/parser'
 
 RSpec.describe Parser, "execute" do
-  let(:result) { described_class.new(line).execute }
+  let(:excluded_items) {  %w(chocolate chocolates pills food medical book books) }
+  let(:result) { described_class.new(line, excluded_items).execute }
 
   context 'when is a goods and not imported' do
     let(:line) { '1 music CD at 16.49' }

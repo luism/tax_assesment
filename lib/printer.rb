@@ -4,11 +4,14 @@ class Printer
   end
 
   def show(title, items, total = 0.0, taxes = 0.0)
-    puts title
-    items.each do |item|
-      puts "#{item[:quantity]} #{item[:description]}: #{item[:quantity] * (item[:price] + item[:tax]).round(2)}"
+    title.tap do |string|
+      string << "\n"
+      items.each do |item|
+        string << "#{item[:quantity]} #{item[:description]}: #{item[:quantity] * (item[:price] + item[:tax]).round(2)}\n"
+      end
+      string << "Sales Taxes: #{taxes}"
+      string << "\n"
+      string << "Total: #{total}"
     end
-    puts "Sales Taxes: #{taxes}"
-    puts "Total: #{total}"
   end
 end
